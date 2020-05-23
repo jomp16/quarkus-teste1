@@ -1,0 +1,16 @@
+quarkus:
+  vertx:
+    prefer-native-transport: true
+  datasource:
+    db-kind: "postgresql"
+    username: "<USERNAME>"
+    password: "<PASSWORD>"
+
+    jdbc:
+      url: "jdbc:postgresql://<HOSTNAME>:5432/<DATABASE>"
+      max-size: 20
+  flyway:
+    migrate-at-start: true
+  hibernate-orm:
+    database:
+      generation: "update"
